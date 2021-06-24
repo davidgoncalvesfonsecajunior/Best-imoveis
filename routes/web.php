@@ -17,15 +17,9 @@ use App\Http\Controllers\Admin\CidadeController;
 
 Route::redirect('/', '/admin/cidades');
 
-
-
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('cidades', [CidadeController::class, 'cidades'])->name('cidades.listar');
-    Route::get('cidades/adicionar', [CidadeController::class, 'formAdicionar'])->name('cidades.form');
-    Route::post('cidades/adicionar', [CidadeController::class, 'adicionar'])->name('cidades.adicionar');
-    Route::delete('cidades/{id}', [CidadeController::class, 'deletar'])->name('cidades.deletar');
-    Route::get('cidades/{id}', [CidadeController::class, 'formEditar'])->name('cidades.formEditar');
-    Route::put('cidades/{id}', [CidadeController::class, 'editar'])->name('cidades.editar');
+
+    Route::resource('cidades', CidadeController::class)->except(['show']);
 });
 
 Route::get('/sobre', function () {

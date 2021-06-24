@@ -26,7 +26,7 @@ class CidadeRequest extends FormRequest
         return [
             //validar os dados
 
-            'nome' => "bail|required|min:3|max:100|unique:cidades,nome,$this->id"
+            'nome' => "bail|required|min:3|max:100|unique:cidades,nome,$this->cidade"
 
         ];
     }

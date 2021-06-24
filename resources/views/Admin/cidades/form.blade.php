@@ -21,7 +21,7 @@
         </div>
 
         <div class="right-align">
-            <a class="btn-flat waves-effect" href="{{route('admin.cidades.listar')}}">Cancelar</a>
+            <a class="btn-flat waves-effect" href="{{route('admin.cidades.index')}}">Cancelar</a>
             <button class="btn waves-effect waves-light" type="submit">Salvar</button>
         </div>
     </form>
